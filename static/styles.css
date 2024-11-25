@@ -1,0 +1,224 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../static/image/bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: transparent;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(1px);
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 10px;
+    display: block;
+}
+
+select, input, button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+select, input {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+select:focus, input:focus {
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+}
+
+button {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 153, 0, 0.5);
+}
+
+
+.qr-display {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    background: transparent;
+}
+
+.qr-display img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: red;
+    display: none;
+}
+
+.message.success {
+    color: #4caf50;
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    label, select, input, button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+select {
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: transparent; 
+    color: #fff; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+}
+
+
+select::after {
+    content: '▼'; 
+    font-size: 0.8rem;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select option {
+    background: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    padding: 10px;
+}
+
+select:focus, select:hover {
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    border-color: rgba(255, 204, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite; 
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+

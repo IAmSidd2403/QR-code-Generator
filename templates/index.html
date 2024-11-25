@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="static/image/image.jpg" alt="" class="logo">
+        <h1>QR Code Generator</h1>
+        <p>Generate QR codes for text, URLs, or uploaded files.</p>
+
+        <!-- Input Type Selection -->
+        <label for="input-type">Select Input Type:</label>
+        <select id="input-type" onchange="toggleInputFields()">
+            <option value="text">Text/URL</option>
+            <option value="file">File Upload</option>
+        </select>
+
+        <!-- Text/URL Input -->
+        <div id="text-input-section">
+            <label for="text-input">Enter Text or URL:</label>
+            <input type="text" id="text-input" placeholder="Enter text or URL">
+        </div>
+
+        <!-- File Upload Input -->
+        <div id="file-input-section" class="hidden">
+            <label for="file-input">Upload a File:</label>
+            <input type="file" id="file-input">
+        </div>
+
+        <button onclick="generateQRCode()">Generate QR Code</button>
+
+        <!-- QR Code Display -->
+        <div id="qr-code-display" class="qr-display hidden">
+            <p>Your QR Code:</p>
+        </div>
+
+        <!-- Messages -->
+        <div id="error-message" class="message">Please select valid input.</div>
+        <div id="success-message" class="message success">QR Code Generated Successfully!</div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
